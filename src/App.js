@@ -1,18 +1,16 @@
 import './App.css';
-import Home from '../'
+import Home from './pages/Home';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          <h1>~ Cocktail Randomizer Name or Logo Here ~</h1>
-          <h2>Click here to open shaker</h2>
-          
-        </p>
-      </header>
-    </div>
-  );
+import React, { Component } from 'react';
+
+export class App extends Component {
+  render() {
+    return (
+      <div>
+        <Home />
+      </div>
+    );
+  }
 }
 
 export default App;

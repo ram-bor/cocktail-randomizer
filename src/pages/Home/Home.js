@@ -1,8 +1,9 @@
 import React from 'react';
+import 'Home.css';
 
 function Home() {
   return (
-    <div>
+    <div className="home">
       <header className="home-header">
         <p>
           <h1>~ Cocktail Randomizer Name or Logo Here ~</h1>
