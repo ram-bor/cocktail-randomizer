@@ -1,5 +1,5 @@
 import React from 'react';
-import 'DrinkInfo.css';
+import './DrinkInfo.css';
 
 function DrinkInfo() {
   return (
