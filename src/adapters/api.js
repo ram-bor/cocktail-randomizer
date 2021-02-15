@@ -1,6 +1,6 @@
 import Axios from 'axios';
 
-url = 
+url = 'https://powerful-mountain-75920.herokuapp.com/cocktails';
 
 // using Axios create method to instantiate  Data object
 export default axiosInstance(() => {
@@ -17,3 +17,4 @@ export function post(url, reqData) {
   const axios = axiosInstance();
   return axios.post(url, reqData);
 }
+
