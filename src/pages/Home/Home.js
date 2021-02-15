@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-// import api from '../../adapters/Api'
+import Button from '../../components/Button/Button';
 
 function Home() {
   return (
@@ -8,7 +8,7 @@ function Home() {
       <header className="home-header">
         <p>
           <h1>~ Cocktail Randomizer Name or Logo Here ~</h1>
-          <h2>Click here to open shaker</h2>
+          <Button />
         </p>
       </header>
     </div>

@@ -7,6 +7,14 @@ import DrinkInfo from './pages/DrinkInfo/DrinkInfo.js';
 import React, { Component } from 'react';
 
 export class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      page: 'home',
+    };
+    // Bind any methods below
+  }
   render() {
     return (
       <div>
