@@ -1,6 +1,7 @@
 import React from 'react';
 import './Home.css';
 import Button from '../../components/Button/Button';
+import Api from '../../adapters/Api';
 
 function Home() {
   return (
@@ -9,6 +10,7 @@ function Home() {
         <p>
           <h1>~ Cocktail Randomizer Name or Logo Here ~</h1>
           <Button />
+          <Api />
         </p>
       </header>
     </div>

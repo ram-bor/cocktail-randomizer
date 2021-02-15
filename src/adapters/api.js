@@ -1,27 +1,40 @@
-// import axios from 'axios';
-// import React from 'react';
+import axios from 'axios';
+import React, { Component } from 'react';
 
-// var url = 'https://powerful-mountain-75920.herokuapp.com/cocktails';
+let url = 'https://powerful-mountain-75920.herokuapp.com/cocktails';
 
-// export default class Api extends React.Component {
-//   state = {
-//     drinks = []
-//   }
+export default class Api extends Component {
+  constructor() {
+    super();
+    this.state = {
+      drinks: [],
+    };
+  }
+  componentDidMount() {
+    axios.get(url).then(response => {
+      const drinks = response.data;
+      this.setState({ drinks });
+      console.log(drinks);
+      console.log(
+        'Success, component did Mount! Axios made HTTP request to url and produced JSON format data'
+      );
+    });
+  }
+  componentDidUpdate() {
+    console.log('Component did update!');
+  }
 
-//   componentDidMount() {
-//       axios.get(url)
-//           .then(response => {
-//             const drinks = response.data
-//             this.setState({ drinks })
-//           })
-//   }
-
-//   render() {
-//       return (
-//           <ul> {this.state.drinks.map(drinks => <li>{drinks.name}</li> )} </ul>
-//       )
-//   }
-// }
+  render() {
+    return (
+      <ul>
+        {' '}
+        {this.state.drinks.map(drinks => (
+          <li>{drinks.name}</li>
+        ))}{' '}
+      </ul>
+    );
+  }
+}
 
 // using Axios create method to instantiate  Data object
 // export default axiosInstance(() => {
@@ -38,4 +51,3 @@
 // export function post(url, reqData) {
 //   const axios = axiosInstance();
 //   return axios.post(url, reqData);
-// }
