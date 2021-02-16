@@ -10,6 +10,18 @@ export default class Api extends Component {
       drinks: [],
     };
   }
+
+  render() {
+    return (
+      <div>
+        {' '}
+        {this.state.drinks.map(drinks => (
+          <h4>{drinks.name}</h4>
+        ))}{' '}
+      </div>
+    );
+  }
+
   componentDidMount() {
     axios.get(url).then(response => {
       const drinks = response.data;
@@ -20,19 +32,9 @@ export default class Api extends Component {
       );
     });
   }
+
   componentDidUpdate() {
     console.log('Component did update!');
-  }
-
-  render() {
-    return (
-      <ul>
-        {' '}
-        {this.state.drinks.map(drinks => (
-          <h4>{drinks.name}</h4>
-        ))}{' '}
-      </ul>
-    );
   }
 }
 
