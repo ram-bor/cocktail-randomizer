@@ -1,5 +1,6 @@
 import React from 'react';
 import './DrinkInfo.css';
+import Card from '../../components/Card/Card';
 
 function DrinkInfo() {
   return (
@@ -7,7 +8,14 @@ function DrinkInfo() {
       <h1>
         Drink Information will be <i>drinksplayed</i> here
       </h1>
-      <h3>(Also on another page)</h3>
+      <h3>(last page)</h3>
+      <Card
+        icon="pic"
+        name="fuk me up fam"
+        glass="martini glass idk"
+        ingredients="poison"
+        instructions="run away"
+      />
     </div>
   );
 }
