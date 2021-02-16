@@ -1,7 +1,7 @@
 import './App.css';
 import Home from './pages/Home/Home.js';
 import Shaker from './pages/Shaker/Shaker.js';
-import DrinkChoice from './pages/DrinkChoice/DrinkChoice.js';
+import RandomDrink from './pages/RandomDrink/RandomDrink.js';
 import DrinkInfo from './pages/DrinkInfo/DrinkInfo.js';
 import Api from './adapters/Api';
 
@@ -21,7 +21,7 @@ export class App extends Component {
       <div>
         <Home />
         <Shaker />
-        <DrinkChoice />
+        <RandomDrink />
         <DrinkInfo />
       </div>
     );

@@ -27,10 +27,10 @@ export default class Api extends Component {
   render() {
     return (
       <ul>
-        {/* {' '}
+        {' '}
         {this.state.drinks.map(drinks => (
-          <li>{drinks.name}</li>
-        ))}{' '} */}
+          <h4>{drinks.name}</h4>
+        ))}{' '}
       </ul>
     );
   }

@@ -10,7 +10,6 @@ function Home() {
         <p>
           <h1>~ Cocktail Randomizer Name or Logo Here ~</h1>
           <Button />
-          <Api />
         </p>
       </header>
     </div>
