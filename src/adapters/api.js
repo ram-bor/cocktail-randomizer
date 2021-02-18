@@ -16,7 +16,7 @@ export default class Api extends Component {
       <div>
         {' '}
         {this.state.drinks.map(drinks => (
-          <h4>{drinks.name}</h4>
+          <h4>{drinks.glass}</h4>
         ))}{' '}
       </div>
     );
