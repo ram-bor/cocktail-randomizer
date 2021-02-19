@@ -6,7 +6,7 @@ import Api from '../../adapters/Api';
 function RandomDrink() {
   return (
     <div className="random-drink">
-      <div className="card">
+      <div className="card-container">
         <RandomDrinkCard />
         <Api />
       </div>
