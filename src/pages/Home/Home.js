@@ -8,13 +8,12 @@ import { Route, Link } from 'react-router-dom';
 function Home(props) {
   return (
     <div className="home">
-      <div>
-        <Link to="/shaker" />
-      </div>
+      <nav>
+        <Link to="/shaker"></Link>
+      </nav>
       <header className="home-header">
         <p>
           <h1>~ {props.name} Here ~</h1>
-          <Route path="/shaker" Button/> />
         </p>
       </header>
     </div>
