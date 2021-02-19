@@ -6,12 +6,10 @@ import Api from '../../adapters/Api';
 function RandomDrink() {
   return (
     <div className="random-drink">
-      <h1>
-        Random drink will <b>splash</b> here
-      </h1>
-      {/*  */}
-      <RandomDrinkCard />
-      <Api />
+      <div className="card">
+        <RandomDrinkCard />
+        <Api />
+      </div>
     </div>
   );
 }

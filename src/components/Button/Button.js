@@ -4,7 +4,7 @@ export default function Button() {
   return (
     <div>
       <button type="button" class="btn btn-success btn-lg">
-        Success
+        Go
       </button>
     </div>
   );

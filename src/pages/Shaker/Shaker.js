@@ -15,8 +15,7 @@ function Shaker() {
           </Link>
         </div>
         <div>
-          {' '}
-          <Route path="/drinks" component={RandomDrink} />{' '}
+          <Route path="/drinks" component={RandomDrink} />
         </div>
       </div>
     </div>

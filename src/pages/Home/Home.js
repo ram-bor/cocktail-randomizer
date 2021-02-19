@@ -4,7 +4,7 @@ import Button from '../../components/Button/Button';
 import Shaker from '../Shaker/Shaker';
 import { Route, Link } from 'react-router-dom';
 
-function Home(props) {
+function Home() {
   return (
     <div className="home">
       <header className="home-content">
@@ -15,8 +15,7 @@ function Home(props) {
           </Link>
         </div>
         <div>
-          {' '}
-          <Route path="/shaker" component={Shaker} />{' '}
+          <Route path="/shaker" component={Shaker} />
         </div>
       </header>
     </div>
