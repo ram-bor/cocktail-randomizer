@@ -15,12 +15,12 @@ export class App extends Component {
     return (
       <div>
         <div>
-          <Link to="/home"></Link>
+          <Link to="/"></Link>
           <Link to="/shaker"></Link>
         </div>
         <main>
-          <Route path="/home" render={() => <Home />} />
-          <Route path="/shaker" render={() => <Shaker />} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/shaker" component={Shaker} />
         </main>
       </div>
     );
