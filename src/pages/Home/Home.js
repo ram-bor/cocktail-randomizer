@@ -7,10 +7,8 @@ import { Route, Link } from 'react-router-dom';
 function Home(props) {
   return (
     <div className="home">
-      <header className="home-header">
-        <p>
-          <h1> ~ App Logo Here ~ </h1>
-        </p>
+      <header className="home-content">
+        <h1> ~ App Logo Here ~ </h1>
         <div>
           <Link to="/shaker">
             <Button />
