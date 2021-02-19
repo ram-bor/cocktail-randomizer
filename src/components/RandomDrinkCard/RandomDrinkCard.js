@@ -15,8 +15,11 @@ export default function RandomDrinkCard(props) {
           Some quick example text to build on the card title and make up the
           bulk of the card's content. (Drink here)
         </p>
+        <a href="/" class="btn btn-danger">
+          No! Choose another drink chosen
+        </a>
         <a href="/" class="btn btn-primary">
-          Go somewhere
+          Yes! Go to specific drink
         </a>
       </div>
     </div>
