@@ -19,8 +19,8 @@ export class App extends Component {
           <Link to="/shaker"></Link>
         </div>
         <main>
-          <Route path="/" render={() => <Redirect to="/home" />} />
           <Route path="/home" render={() => <Home />} />
+          <Route path="/shaker" render={() => <Shaker />} />
         </main>
       </div>
     );

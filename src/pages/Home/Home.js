@@ -2,7 +2,6 @@ import React from 'react';
 import './Home.css';
 import Button from '../../components/Button/Button';
 import Shaker from '../Shaker/Shaker';
-import Api from '../../adapters/Api';
 import { Route, Link } from 'react-router-dom';
 
 function Home(props) {
@@ -14,9 +13,12 @@ function Home(props) {
         </p>
         <div>
           <Link to="/shaker">
-            {' '}
-            <Button />{' '}
+            <Button />
           </Link>
+        </div>
+        <div>
+          {' '}
+          <Route path="/shaker" component={Shaker} />{' '}
         </div>
       </header>
     </div>
