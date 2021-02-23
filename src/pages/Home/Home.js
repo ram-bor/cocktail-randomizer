@@ -3,7 +3,6 @@ import './Home.css';
 import Button from '../../components/Button/Button';
 import Shaker from '../Shaker/Shaker';
 import { Route, Link } from 'react-router-dom';
-import Api from '../../adapters/Api';
 
 function Home() {
   return (

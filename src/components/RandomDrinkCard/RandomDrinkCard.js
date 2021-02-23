@@ -1,14 +1,43 @@
 import React, { Component } from 'react';
-import Api from '../../adapters/Api';
+import axios from 'axios';
+
+let url = 'https://powerful-mountain-75920.herokuapp.com/cocktails/';
+let randomDrinkUrl =
+  'https://powerful-mountain-75920.herokuapp.com/cocktails/cocktail';
 
 export default class RandomDrinkCard extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      drinks: [],
+      dataReady: false,
+      image: '',
+      id: '',
+      name: '',
+      category: '',
+      glass: '',
+      instructions: '',
+    };
   }
 
-  loadData = () => {
-    console.log(Api);
-  };
+  componentDidMount() {
+    axios
+      .get(randomDrinkUrl)
+      .then(res => {
+        const randomDrink = res.data[0];
+        console.dir(randomDrink);
+        this.setState({
+          dataReady: true,
+          drinks: randomDrink,
+        });
+        console.log(
+          'Success, component did Mount! Axios made HTTP request to url and loaded data'
+        );
+      })
+      .catch(err => {
+        console.log('Error! ', err);
+      });
+  }
 
   render() {
     return (
