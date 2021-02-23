@@ -4,8 +4,8 @@ import React, { Component } from 'react';
 let url = 'https://powerful-mountain-75920.herokuapp.com/cocktails';
 
 export default class Api extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       drinks: [],
     };
