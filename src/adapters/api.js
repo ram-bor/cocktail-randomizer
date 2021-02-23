@@ -1,7 +1,9 @@
 import axios from 'axios';
 import React, { Component } from 'react';
 
-let url = 'https://powerful-mountain-75920.herokuapp.com/cocktails';
+let url = 'https://powerful-mountain-75920.herokuapp.com/cocktails/';
+let randomDrinkUrl =
+  'https://powerful-mountain-75920.herokuapp.com/cocktails/cocktail';
 
 export default class Api extends Component {
   constructor(props) {
@@ -14,10 +16,9 @@ export default class Api extends Component {
   render() {
     return (
       <div>
-        {' '}
-        {this.state.drinks.map(drinks => (
-          <h4>{drinks.glass}</h4>
-        ))}{' '}
+        {this.state.drinks.map(drinks => {
+          
+        }
       </div>
     );
   }

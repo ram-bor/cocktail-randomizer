@@ -3,9 +3,10 @@ import React, { Component } from 'react';
 import Api from '../../adapters/Api';
 
 export default class RandomDrinkCard extends Component {
-  constructor(props)
-  super(props)
-  
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <div class="card">
