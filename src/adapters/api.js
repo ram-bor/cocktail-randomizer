@@ -24,10 +24,11 @@ export default class Api extends Component {
     axios
       .get(randomDrinkUrl)
       .then(res => {
-        console.dir(res.data);
+        const randomDrink = res.data[0];
+        console.dir(randomDrink);
         this.setState({
           dataReady: true,
-          drinks: res.data,
+          drinks: randomDrink,
         });
         console.log(
           'Success, component did Mount! Axios made HTTP request to url and loaded data'
