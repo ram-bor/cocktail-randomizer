@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
-
 import Api from '../../adapters/Api';
 
 export default class RandomDrinkCard extends Component {
   constructor(props) {
     super(props);
   }
+
+  loadData = () => {
+    console.log(Api);
+  };
 
   render() {
     return (

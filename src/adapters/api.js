@@ -11,6 +11,11 @@ export default class Api extends Component {
     this.state = {
       drinks: [],
       loading: true,
+      id: '',
+      name: '',
+      category: '',
+      glass: '',
+      instructions: '',
     };
   }
   componentDidMount() {
@@ -32,16 +37,9 @@ export default class Api extends Component {
   render() {
     return (
       <div>
-        {' '}
-        {this.state.loading ? (
-          <div>loading...</div>
-        ) : (
-          <div>
-            {this.state.drinks.map(drinks => (
-              <div>{drinks.glass}</div>
-            ))}
-          </div>
-        )}
+        {this.state.drinks.map(drinks => (
+          <div>{drinks.glass}</div>
+        ))}
       </div>
     );
   }
