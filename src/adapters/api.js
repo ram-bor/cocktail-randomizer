@@ -10,21 +10,23 @@ export default class Api extends Component {
     super(props);
     this.state = {
       drinks: [],
-      loading: true,
-      id: '',
-      name: '',
-      category: '',
-      glass: '',
-      instructions: '',
+      //   dataReady: false,
+      //   image: '',
+      //   id: '',
+      //   name: '',
+      //   category: '',
+      //   glass: '',
+      //   instructions: '',
+      // };
     };
   }
   componentDidMount() {
     axios
-      .get(url)
+      .get(randomDrinkUrl)
       .then(response => {
         console.log(response);
-        const drinks = response.data;
-        this.setState({ drinks });
+        // const drinks = response.data;
+        // this.setState({ drinks, dataReady: true });
         console.log(
           'Success, component did Mount! Axios made HTTP request to url and loaded data'
         );
@@ -37,9 +39,12 @@ export default class Api extends Component {
   render() {
     return (
       <div>
-        {this.state.drinks.map(drinks => (
-          <div>{drinks.glass}</div>
-        ))}
+        {/* {this.state.drinks.map(drinks => ( */}
+        {/* // <p>{drinks.name}</p>
+        // <p>{drinks.category}</p>
+        // <p>{drinks.glass}</p>
+        // <p>{drinks.ingredients}</p> */}
+        {/* ))} */}
       </div>
     );
   }
