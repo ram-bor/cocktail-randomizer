@@ -10,32 +10,39 @@ export default class Api extends Component {
     super(props);
     this.state = {
       drinks: [],
-      // dataReady: false
+      loading: true,
     };
   }
-
-  
   componentDidMount() {
-    axios.get(url).then(response => {
-      const drinks = response.data;
-      this.setState({ drinks });
-      console.log(drinks);
-      console.log(
-        'Success, component did Mount! Axios made HTTP request to url and produced JSON format data'
+    axios
+      .get(url)
+      .then(response => {
+        console.log(response);
+        const drinks = response.data;
+        this.setState({ drinks });
+        console.log(
+          'Success, component did Mount! Axios made HTTP request to url and loaded data'
         );
+      })
+      .catch(err => {
+        console.log('Error! ', err);
       });
-    }
-    
-    componentDidUpdate() {
-      console.log('Component did update!');
-    }
   }
-  
+
   render() {
     return (
       <div>
-        {this.state.drinks.map(drinks => {
-
+        {' '}
+        {this.state.loading ? (
+          <div>loading...</div>
+        ) : (
+          <div>
+            {this.state.drinks.map(drinks => (
+              <div>{drinks.glass}</div>
+            ))}
+          </div>
+        )}
       </div>
     );
   }
+}
