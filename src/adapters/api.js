@@ -10,19 +10,11 @@ export default class Api extends Component {
     super(props);
     this.state = {
       drinks: [],
+      // dataReady: false
     };
   }
 
-  render() {
-    return (
-      <div>
-        {this.state.drinks.map(drinks => {
-          
-        }
-      </div>
-    );
-  }
-
+  
   componentDidMount() {
     axios.get(url).then(response => {
       const drinks = response.data;
@@ -30,11 +22,20 @@ export default class Api extends Component {
       console.log(drinks);
       console.log(
         'Success, component did Mount! Axios made HTTP request to url and produced JSON format data'
-      );
-    });
+        );
+      });
+    }
+    
+    componentDidUpdate() {
+      console.log('Component did update!');
+    }
   }
+  
+  render() {
+    return (
+      <div>
+        {this.state.drinks.map(drinks => {
 
-  componentDidUpdate() {
-    console.log('Component did update!');
+      </div>
+    );
   }
-}
