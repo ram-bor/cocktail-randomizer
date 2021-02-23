@@ -19,24 +19,33 @@ export default class RandomDrinkCard extends Component {
       instructions: '',
     };
   }
-
-  componentDidMount() {
+  loadData = () => {
     axios
       .get(randomDrinkUrl)
       .then(res => {
-        const randomDrink = res.data[0];
+        let randomDrink = res.data[0];
         console.dir(randomDrink);
         this.setState({
           dataReady: true,
           drinks: randomDrink,
+          id: randomDrink._id,
+          name: randomDrink.name,
+          category: randomDrink.category,
+          glass: randomDrink.glass,
+          ingredients: randomDrink.ingredients,
+          instructions: randomDrink.instructions,
         });
         console.log(
-          'Success, component did Mount! Axios made HTTP request to url and loaded data'
+          'Success, component did mount! Axios made HTTP request to url and loaded data'
         );
       })
       .catch(err => {
         console.log('Error! ', err);
       });
+  };
+
+  componentDidMount() {
+    this.loadData();
   }
 
   render() {
@@ -44,12 +53,12 @@ export default class RandomDrinkCard extends Component {
       <div class="card">
         <img
           src="..."
-          class="card-img-top"
+          class="card-img"
           style={{ width: '18rem' }}
           alt="(Image here)"
         />
         <div class="card-body">
-          <h4 class="card-title">(Drink Name)</h4>
+          <h4 class="card-title"></h4>
           <p class="card-text">
             Some quick example text to build on the card title and make up the
             bulk of the card's content. (Drink here)
