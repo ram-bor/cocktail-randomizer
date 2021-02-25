@@ -3,7 +3,7 @@ import './RandomDrink.css';
 import Button from '../../components/Button/Button';
 import RandomDrinkCard from '../../components/RandomDrinkCard/RandomDrinkCard';
 import DrinkInfo from '../DrinkInfo/DrinkInfo';
-import { Route, Link } from 'react-router-dom';
+import { Router, Route, Link } from 'react-router-dom';
 
 function RandomDrink() {
   return (
@@ -27,6 +27,7 @@ function RandomDrink() {
           </div>
           <div>
             <Route path="/drinkinfo" component={DrinkInfo} />
+            <Route path="/drinks" />
           </div>
         </div>
       </div>
