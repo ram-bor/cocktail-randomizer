@@ -60,12 +60,6 @@ export default class RandomDrinkCard extends Component {
           />
           <h4 class="drink-name">{this.state.name}</h4>
           <p class="drink-ingredients">{this.state.ingredients}</p>
-          <a href="/" class="btn btn-danger">
-            No! Choose another drink chosen
-          </a>
-          <a href="/" class="btn btn-primary">
-            Yes! Go to specific drink
-          </a>
         </div>
       </div>
     );
