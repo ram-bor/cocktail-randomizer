@@ -11,8 +11,14 @@ function RandomDrink() {
           <RandomDrinkCard />
         </div>
         <div className="button-container">
-          <Button />
-          <Button />
+          <div>
+            <Button />
+            <p>Choose again!</p>
+          </div>
+          <div>
+            <Button />
+            <p>Yes please!</p>
+          </div>
         </div>
       </div>
     </div>

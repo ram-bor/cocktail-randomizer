@@ -53,10 +53,10 @@ export default class RandomDrinkCard extends Component {
       <div class="card">
         <div class="card-body">
           <img
-            src="..."
+            src="https://i.kym-cdn.com/photos/images/original/001/285/680/e17.jpg"
             class="card-img"
             style={{ width: '18rem' }}
-            alt="(Image here)"
+            alt="Place holder image"
           />
           <h4 class="drink-name">{this.state.name}</h4>
           <p class="drink-ingredients">{this.state.ingredients}</p>
