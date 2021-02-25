@@ -1,20 +1,22 @@
 .random-drink-parent {
   width: 100vw;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
-
+ 
 .random-drink {
   display: flex;
   flex-direction: column;
+  justify-self: center;
 }
 
 .card-container {
   display: flex;
-  align-items: baseline;
 }
 
 .button-container {
   display: flex;
   justify-content: space-evenly;
+  margin-top: 10px;
 }
