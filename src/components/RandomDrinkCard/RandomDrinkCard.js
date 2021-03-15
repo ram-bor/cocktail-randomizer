@@ -38,6 +38,7 @@ export default class RandomDrinkCard extends Component {
         console.log(
           'Success, component did mount! Axios made HTTP request to url and loaded data'
         );
+        console.log(this.state.id);
       })
       .catch(err => {
         console.log('Error! ', err);

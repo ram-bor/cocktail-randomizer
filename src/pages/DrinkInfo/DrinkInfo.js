@@ -3,7 +3,7 @@ import './DrinkInfo.css';
 import DrinkCard from '../../components/DrinkCard/DrinkCard';
 
 export class DrinkInfo extends Component {
-  constructor() {
+  constructor(props) {
     super();
   }
 
@@ -13,7 +13,6 @@ export class DrinkInfo extends Component {
         <h1>
           Drink Information will be <i>drinksplayed</i> here
         </h1>
-        <h3>(last page)</h3>
         <DrinkCard
           icon="pic"
           name="fuk me up fam"
