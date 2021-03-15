@@ -8,7 +8,8 @@ function DrinkInfo(props) {
       <h1>
         Drink Information will be <i>drinksplayed</i> here
       </h1>
-      <DrinkCard />
+      {/* <DrinkCard /> */}
+      {props.info}
     </div>
   );
 }

@@ -5,6 +5,7 @@ import Button from '../../components/Button/Button';
 import DrinkInfo from '../../pages/DrinkInfo/DrinkInfo';
 import Shaker from '../../pages/Shaker/Shaker';
 import { Router, Route, Link } from 'react-router-dom';
+import { render } from '@testing-library/react';
 import axios from 'axios';
 
 let url = 'https://powerful-mountain-75920.herokuapp.com/cocktails/';
@@ -17,7 +18,7 @@ export class RandomDrink extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      drinks: [],
+      drink: [],
       dataReady: false,
       image: '',
       id: '',
@@ -26,7 +27,8 @@ export class RandomDrink extends Component {
       glass: '',
       instructions: '',
     };
-    // this.id = this.state.id;
+    this.id = this.props.id;
+    this.onClick = this.onClick.bind(this);
   }
 
   loadData = () => {
@@ -47,8 +49,7 @@ export class RandomDrink extends Component {
         console.log(
           'Success, component did mount! Axios made HTTP request to url and loaded data'
         );
-        console.log(this.state.drink);
-        return randomDrink;
+        console.log(this.state);
       })
       .catch(err => {
         console.log('Error! ', err);
@@ -59,12 +60,34 @@ export class RandomDrink extends Component {
     this.loadData();
   }
 
-  loadAcceptedDrink = () => {
-    console.log(this.id);
+  // loadAcceptedDrink = () => {
+  //   if (id) {
+  //     axios
+  //       .get(`${idURL}+${id}`)
+  //       .then(res => {
+  //         let drink = res;
+  //         console.log(drink);
+  //       })
+  //       .catch(err => {
+  //         console.log('Error grabbing id route', err);
+  //       });
+  //   } else {
+  //     return null;
+  //   }
+  //   return (
+  //     <div>
+  //       <DrinkInfo info={this.loadAcceptedDrink} />
+  //     </div>
+  //   );
+  // };
+
+  handleClick = e => {
+    console.log(e.target);
   };
 
   render() {
     if (this.state.dataReady === true) {
+      // this.loadAcceptedDrink();
       return (
         <div className="random-drink-parent">
           <div className="random-drink">
@@ -78,9 +101,9 @@ export class RandomDrink extends Component {
               <p>Choose again!</p>
             </div>
             <div>
-              <Link to="/drinkinfo">
-                <Button />
-              </Link>
+              {/* <Link to="/drinkinfo"> */}
+              <Button onClick={this.handleClick} />
+              {/* </Link> */}
               <p>Yes please!</p>
             </div>
             <div>
