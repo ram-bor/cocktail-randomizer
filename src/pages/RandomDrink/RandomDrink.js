@@ -11,9 +11,7 @@ export class RandomDrink extends Component {
   constructor() {
     super();
   }
-  renderAcceptedDrink = () => {
-    alert('drink loading....');
-  };
+
 
   render() {
     return (
@@ -31,7 +29,7 @@ export class RandomDrink extends Component {
             </div>
             <div>
               <Link to="/drinkinfo">
-                <Button onClick={this.renderAcceptedDrink} />
+                <Button />
               </Link>
               <p>Yes please!</p>
             </div>

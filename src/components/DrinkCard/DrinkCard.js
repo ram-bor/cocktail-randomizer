@@ -1,15 +1,21 @@
 import React from 'react';
+import { loadData } from '../RandomDrinkCard/RandomDrinkCard';
 
-export default function DrinkCard(props) {
-  return (
-    <div className="drink-card">
-      <ul>
-        <li>Icon: {props.icon}</li>
-        <li>Name: {props.name}</li>
-        <li>Glass: {props.glass}</li>
-        <li>Ingredients: {props.ingredients}</li>
-        <li>Instructions: {props.instructions}</li>
-      </ul>
-    </div>
-  );
+export default class DrinkCard extends React.Component {
+  constructor(props) {
+    super();
+  }
+  render() {
+    return (
+      <div className="drink-card">
+        <ul>
+          <li>Icon: {this.state.icon}</li>
+          <li>Name: {this.state.name}</li>
+          <li>Glass: {this.state.glass}</li>
+          <li>Ingredients: {this.state.ingredients}</li>
+          <li>Instructions: {this.state.instructions}</li>
+        </ul>
+      </div>
+    );
+  }
 }

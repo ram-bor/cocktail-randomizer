@@ -19,7 +19,7 @@ export default class RandomDrinkCard extends Component {
       instructions: '',
     };
   }
-  loadData = () => {
+  static loadData = () => {
     axios
       .get(randomDrinkUrl)
       .then(res => {
@@ -38,7 +38,6 @@ export default class RandomDrinkCard extends Component {
         console.log(
           'Success, component did mount! Axios made HTTP request to url and loaded data'
         );
-        console.log(this.state.id);
       })
       .catch(err => {
         console.log('Error! ', err);
@@ -61,7 +60,6 @@ export default class RandomDrinkCard extends Component {
               alt="Place holder image"
             />
             <h4 class="drink-name">{this.state.name}</h4>
-            <p class="drink-ingredients">{this.state.ingredients}</p>
           </div>
         </div>
       );
