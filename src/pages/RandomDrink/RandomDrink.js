@@ -26,6 +26,7 @@ export class RandomDrink extends Component {
       glass: '',
       instructions: '',
     };
+    // this.id = this.state.id;
   }
 
   loadData = () => {
@@ -33,10 +34,9 @@ export class RandomDrink extends Component {
       .get(randomDrinkUrl)
       .then(res => {
         let randomDrink = res.data[0];
-        console.dir(randomDrink);
         this.setState({
           dataReady: true,
-          drinks: randomDrink,
+          drink: randomDrink,
           id: randomDrink._id,
           name: randomDrink.name,
           category: randomDrink.category,
@@ -47,26 +47,28 @@ export class RandomDrink extends Component {
         console.log(
           'Success, component did mount! Axios made HTTP request to url and loaded data'
         );
+        console.log(this.state.drink);
+        return randomDrink;
       })
       .catch(err => {
         console.log('Error! ', err);
       });
   };
 
-  // loadAcceptedDrink = () => {
-  //   axios.get(`idURL${this.id}).then(drink);
-  // };
-
   componentDidMount() {
     this.loadData();
   }
+
+  loadAcceptedDrink = () => {
+    console.log(this.id);
+  };
 
   render() {
     if (this.state.dataReady === true) {
       return (
         <div className="random-drink-parent">
           <div className="random-drink">
-            <RandomDrinkCard name={this.state.name} />
+            <RandomDrinkCard name={this.state.name} id={this.state.id} />
           </div>
           <div className="button-container">
             <div>
