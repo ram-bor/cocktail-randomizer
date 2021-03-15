@@ -1,13 +1,9 @@
 import React from 'react';
 
-export default function DislikeButton(props) {
+export default function Button(props) {
   return (
     <div>
-      <button
-        type="button"
-        class="btn btn-success btn-lg"
-        method={props.method}
-      >
+      <button type="button" className="btn btn-success btn-lg">
         GO
       </button>
     </div>
