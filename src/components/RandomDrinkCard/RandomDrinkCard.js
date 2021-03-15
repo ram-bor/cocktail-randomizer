@@ -11,7 +11,8 @@ export default function RandomDrinkCard(props) {
             style={{ width: '18rem' }}
             alt="Place holder image"
           />
-          <h4 className="drink-name">{props.name}</h4>
+          <h1 className="drink-name">{props.name}</h1>
+          <h5 className="drink-id">{props.id}</h5>
         </div>
       </div>
     </div>

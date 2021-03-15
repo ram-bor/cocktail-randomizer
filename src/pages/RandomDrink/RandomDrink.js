@@ -10,6 +10,8 @@ import axios from 'axios';
 let url = 'https://powerful-mountain-75920.herokuapp.com/cocktails/';
 let randomDrinkUrl =
   'https://powerful-mountain-75920.herokuapp.com/cocktails/cocktail';
+let idURL =
+  'https://powerful-mountain-75920.herokuapp.com/cocktails/cocktail/id/';
 
 export class RandomDrink extends Component {
   constructor(props) {
@@ -50,6 +52,10 @@ export class RandomDrink extends Component {
         console.log('Error! ', err);
       });
   };
+
+  // loadAcceptedDrink = () => {
+  //   axios.get(`idURL${this.id}).then(drink);
+  // };
 
   componentDidMount() {
     this.loadData();
