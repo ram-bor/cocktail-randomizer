@@ -32,7 +32,7 @@ export class RandomDrink extends Component {
             </div>
             <div>
               <Link to="/drinkinfo">
-                <Button onClick={this.sayHello()} />
+                <Button onClick={this.sayHello} />
               </Link>
               <p>Yes please!</p>
             </div>

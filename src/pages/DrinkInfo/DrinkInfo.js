@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './DrinkInfo.css';
 import DrinkCard from '../../components/DrinkCard/DrinkCard';
 
-export class DrinkInfo extends Component() {
-  constructor(props) {
+export class DrinkInfo extends Component {
+  constructor() {
     super();
   }
 
