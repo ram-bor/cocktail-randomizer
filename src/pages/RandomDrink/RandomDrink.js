@@ -83,7 +83,7 @@ export class RandomDrink extends Component {
         </div>
       );
     } else {
-      return <div></div>;
+      return <div>Loading...</div>;
     }
   }
 }
