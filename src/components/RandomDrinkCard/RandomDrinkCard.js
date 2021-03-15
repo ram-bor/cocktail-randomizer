@@ -49,19 +49,23 @@ export default class RandomDrinkCard extends Component {
   }
 
   render() {
-    return (
-      <div class="card">
-        <div class="card-body">
-          <img
-            src="https://i.kym-cdn.com/photos/images/original/001/285/680/e17.jpg"
-            class="card-img"
-            style={{ width: '18rem' }}
-            alt="Place holder image"
-          />
-          <h4 class="drink-name">{this.state.name}</h4>
-          <p class="drink-ingredients">{this.state.ingredients}</p>
+    if (this.state.dataReady === true) {
+      return (
+        <div class="card">
+          <div class="card-body">
+            <img
+              src="https://i.kym-cdn.com/photos/images/original/001/285/680/e17.jpg"
+              class="card-img"
+              style={{ width: '18rem' }}
+              alt="Place holder image"
+            />
+            <h4 class="drink-name">{this.state.name}</h4>
+            <p class="drink-ingredients">{this.state.ingredients}</p>
+          </div>
         </div>
-      </div>
-    );
+      );
+    } else {
+      return <div>Info not available</div>;
+    }
   }
 }
