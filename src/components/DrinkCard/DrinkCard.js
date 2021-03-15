@@ -9,11 +9,12 @@ export default class DrinkCard extends Component {
     return (
       <div className="drink-card">
         <ul>
-          {/* <li>Icon: {this.state.icon}</li> */}
+          {/* <li>Icon: {this.state.icon}</li>
           <li>Name: {this.state.name}</li>
           <li>Glass: {this.state.glass}</li>
           <li>Ingredients: {this.state.ingredients}</li>
-          <li>Instructions: {this.state.instructions}</li>
+          <li>Instructions: {this.state.instructions}</li> */}
+          <li>{this.props.method}</li>
         </ul>
       </div>
     );

@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+import Button from '../../components/Button/Button';
+import DrinkInfo from '../../pages/DrinkInfo/DrinkInfo';
+import Shaker from '../../pages/Shaker/Shaker';
+import { Router, Route, Link } from 'react-router-dom';
+import { render } from 'react-dom';
 import axios from 'axios';
 
 let url = 'https://powerful-mountain-75920.herokuapp.com/cocktails/';
@@ -48,23 +53,44 @@ export default class RandomDrinkCard extends Component {
     this.loadData();
   }
 
+
   render() {
     if (this.state.dataReady === true) {
       return (
-        <div class="card">
-          <div class="card-body">
-            <img
-              src="https://i.kym-cdn.com/photos/images/original/001/285/680/e17.jpg"
-              class="card-img"
-              style={{ width: '18rem' }}
-              alt="Place holder image"
-            />
-            <h4 class="drink-name">{this.state.name}</h4>
+        <div>
+          <div class="card">
+            <div class="card-body">
+              <img
+                src="https://i.kym-cdn.com/photos/images/original/001/285/680/e17.jpg"
+                class="card-img"
+                style={{ width: '18rem' }}
+                alt="Place holder image"
+              />
+              <h4 class="drink-name">{this.state.name}</h4>
+            </div>
+          </div>
+          <div className="button-container">
+            <div>
+              <Link to="/shaker">
+                <Button />
+              </Link>
+              <p>Choose again!</p>
+            </div>
+            <div>
+              <Link to="/drinkinfo">
+                <Button />
+              </Link>
+              <p>Yes please!</p>
+            </div>
+            <div>
+              <Route path="/drinkinfo" component={DrinkInfo} />
+              <Route path="/shaker" component={Shaker} />
+            </div>
           </div>
         </div>
       );
     } else {
-      return <div>Info not available</div>;
+      return null;
     }
   }
 }

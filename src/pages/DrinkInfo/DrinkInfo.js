@@ -5,7 +5,12 @@ import DrinkCard from '../../components/DrinkCard/DrinkCard';
 export class DrinkInfo extends Component {
   constructor(props) {
     super();
+    this.state = {};
   }
+
+  // componentDidMount() {
+  //   this.renderAcceptedChoice();
+  // }
 
   render() {
     return (
@@ -15,7 +20,7 @@ export class DrinkInfo extends Component {
         </h1>
         <DrinkCard
           icon="pic"
-          name="fuk me up fam"
+          name="name"
           glass="martini glass idk"
           ingredients="poison"
           instructions="run away"
