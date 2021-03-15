@@ -19,7 +19,7 @@ export default class RandomDrinkCard extends Component {
       instructions: '',
     };
   }
-  static loadData = () => {
+  loadData = () => {
     axios
       .get(randomDrinkUrl)
       .then(res => {
